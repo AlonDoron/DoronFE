@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "../Header";
+import Sidebar from '../Sidebar';
+import Footer from '../Footer';
 import HomePage from "../HomePage";
 import AboutPage from "../AboutPage";
 import ContactUsPage from "../ContactUsPage";
@@ -9,14 +11,20 @@ import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/about" component={AboutPage} />
-        <Route path="/contactus" component={ContactUsPage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <div className="content">
+        <Sidebar />
+        <div className="center">
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/about" component={AboutPage} />
+            <Route path="/contactus" component={ContactUsPage} />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

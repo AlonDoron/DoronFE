@@ -4,13 +4,15 @@ import "./Header.css";
 
 function Header() {
   return (
-    <nav>
-      <NavLink to="/" exact>
-        דף הבית
+    <header>
+      <nav>
+        <NavLink to="/" exact>
+          דף הבית
       </NavLink>
-      {" | "} <NavLink to="/about">אודותינו</NavLink> {" | "}
-      <NavLink to="/contactus">צור קשר</NavLink>
-    </nav>
+        {" | "} <NavLink to="/about">אודותינו</NavLink> {" | "}
+        <NavLink to="/contactus">צור קשר</NavLink>
+      </nav>
+    </header>
   );
 }
 
