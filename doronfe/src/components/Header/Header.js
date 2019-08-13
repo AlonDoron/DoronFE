@@ -6,10 +6,10 @@ function Header() {
   return (
     <nav>
       <NavLink to="/" exact>
-        Home
+        דף הבית
       </NavLink>
-      {" | "} <NavLink to="/about">About</NavLink> {" | "}
-      <NavLink to="/contactus">Contact Us</NavLink>
+      {" | "} <NavLink to="/about">אודותינו</NavLink> {" | "}
+      <NavLink to="/contactus">צור קשר</NavLink>
     </nav>
   );
 }
