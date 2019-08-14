@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../Header";
-import Sidebar from '../Sidebar';
-import Footer from '../Footer';
+import Sidebar from "../Sidebar";
+import Footer from "../Footer";
 import HomePage from "../HomePage";
 import AboutPage from "../AboutPage";
 import ContactUsPage from "../ContactUsPage";
 import NotFoundPage from "../NotFoundPage";
 import { Switch, Route } from "react-router-dom";
-import "./App.css";
+import "bulma/css/bulma.css";
 
 function App() {
   return (
