@@ -1,36 +1,32 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
+import logo from '../../assets/doronLogo.png';
+
 
 function Header() {
-  const activeStyle = { color: "red" };
   return (
     <header>
-      <nav className="columns is-variable is-4 is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
-        <NavLink
-          to="/"
-          className="column headerItem"
-          activeStyle={activeStyle}
-          exact
-        >
-          דף הבית
-        </NavLink>
-        <NavLink
-          to="/about"
-          className="column headerItem"
-          activeStyle={activeStyle}
-        >
-          אודותינו
-        </NavLink>
-        <NavLink
-          to="/contactus"
-          className="column headerItem"
-          activeStyle={activeStyle}
-        >
-          צור קשר
-        </NavLink>
+      <nav className="navbar" role="navigation" aria-label="main navigation">
+        <div className="navbar-brand">
+          <a className="navbar-item" href="http://localhost:3000">
+            <img src={logo} alt="doronLogo" width="130" height="65" className="headerLogo" />
+          </a>
+          <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="headerNavbarLinks">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="headerNavbarLinks" className="navbar-menu">
+          <div className="navbar-end">
+            <NavLink className="navbar-item" to="/" exact>דף הבית</NavLink>
+            <NavLink className="navbar-item" to="/about">אודותינו</NavLink>
+            <NavLink className="navbar-item" to="/contactus">צור קשר</NavLink>
+          </div>
+        </div>
       </nav>
-    </header>
+    </header >
   );
 }
 
