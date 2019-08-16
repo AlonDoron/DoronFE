@@ -14,7 +14,7 @@ function App() {
     <div className="container">
       <Header />
       <div className="content">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <div className="center">
           <Switch>
             <Route path="/" exact component={HomePage} />
