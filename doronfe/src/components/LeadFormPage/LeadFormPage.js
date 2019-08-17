@@ -1,0 +1,30 @@
+import React, { useState } from "react";
+import LeadForm from "../LeadForm";
+
+function LeadFormPage() {
+  const [userDetails, setUserDetails] = useState({
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    mailAddress: "",
+    otherDetails: ""
+  });
+
+  function handleInputChange({ target }) {
+    setUserDetails({ ...userDetails, [target.name]: target.value });
+  }
+
+  return (
+    <section className="section">
+      <div className="container">
+        <h1 className="title">צרו איתנו קשר</h1>
+        <h2 className="subtitle is-size-5">
+          יש לכם שאלה? רוצים לקבל מידע נוסף?
+        </h2>
+        <LeadForm userDetails={userDetails} onInputChange={handleInputChange} />
+      </div>
+    </section>
+  );
+}
+
+export default LeadFormPage;

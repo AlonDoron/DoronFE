@@ -21,7 +21,7 @@ function AboutPage() {
           ואדיב.
         </p>
         <h4>מקצוענות + שיטתיות = תמורה</h4>
-        <NavLink to="/p2p">
+        <NavLink to="/leadform">
           <img
             className="p2pImage image is-three-quarters"
             src={p2p}

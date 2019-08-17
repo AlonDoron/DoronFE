@@ -8,6 +8,7 @@ import ContactUsPage from "../ContactUsPage";
 import NotFoundPage from "../NotFoundPage";
 import { Switch, Route } from "react-router-dom";
 import "bulma/css/bulma.css";
+import LeadFormPage from "../LeadFormPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" exact component={HomePage} />
             <Route path="/about" component={AboutPage} />
             <Route path="/contactus" component={ContactUsPage} />
+            <Route path="/leadform" component={LeadFormPage} />
             <Route component={NotFoundPage} />
           </Switch>
         </div>
