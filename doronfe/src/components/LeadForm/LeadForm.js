@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
 function LeadForm(props) {
   return (
@@ -30,36 +30,49 @@ function LeadForm(props) {
       </div>
       <div className="field">
         <label className="label">מספר טלפון</label>
-        <div className="control">
+        <div className="control has-icons-right">
           <input
             className="input is-primary"
             type="number"
             placeholder="* מספר טלפון"
             name="phoneNumber"
           />
-          <span className="icon is-small is-left">
+          <span class="icon is-small is-right">
             <FontAwesomeIcon icon={faPhone} />
           </span>
         </div>
       </div>
       <div className="field">
         <label className="label">דואר אלקטרוני</label>
-        <div className="control">
+        <div className="control has-icons-right">
           <input
             className="input"
             type="email"
             placeholder=" דואר אלקטרוני "
             name="mailAddress"
           />
-        </div>
-        <div class="control has-icons-left has-icons-right">
-          <input class="input is-small" type="email" placeholder="Email" />
-          <span class="icon is-small is-left">
-            <FontAwesomeIcon icon={faPhone} />
-          </span>
           <span class="icon is-small is-right">
-            <i class="fas fa-check" />
+            <FontAwesomeIcon icon={faEnvelope} />
           </span>
+        </div>
+      </div>
+      <div className="field">
+        <label className="label">משהו נוסף?</label>
+        <div className="control has-icons-right">
+          <textarea
+            className="input textarea"
+            type="text"
+            placeholder="פרטים נוספים"
+            name="otherDetails"
+          />
+          <span class="icon is-small is-right">
+            <FontAwesomeIcon icon={faQuoteLeft} />
+          </span>
+        </div>
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link is-right" onClick={props.onFormSubmit}>שלח</button>
         </div>
       </div>
     </form>

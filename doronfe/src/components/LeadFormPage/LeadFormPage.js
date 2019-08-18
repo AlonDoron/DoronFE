@@ -21,7 +21,8 @@ function LeadFormPage() {
         <h2 className="subtitle is-size-5">
           יש לכם שאלה? רוצים לקבל מידע נוסף?
         </h2>
-        <LeadForm userDetails={userDetails} onInputChange={handleInputChange} />
+        <p>הזינו את פרטיכם ונחזור אליכם בהקדם: </p>
+        <LeadForm userDetails={userDetails} onInputChange={handleInputChange} onFormSubmit={handleFormSubmit} />
       </div>
     </section>
   );
