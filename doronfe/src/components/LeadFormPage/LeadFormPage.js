@@ -14,6 +14,10 @@ function LeadFormPage() {
     setUserDetails({ ...userDetails, [target.name]: target.value });
   }
 
+  function handleFormSubmit(event) {
+    event.preventDefault();
+  }
+
   return (
     <section className="section">
       <div className="container">
@@ -22,7 +26,11 @@ function LeadFormPage() {
           יש לכם שאלה? רוצים לקבל מידע נוסף?
         </h2>
         <p>הזינו את פרטיכם ונחזור אליכם בהקדם: </p>
-        <LeadForm userDetails={userDetails} onInputChange={handleInputChange} onFormSubmit={handleFormSubmit} />
+        <LeadForm
+          userDetails={userDetails}
+          onInputChange={handleInputChange}
+          onFormSubmit={handleFormSubmit}
+        />
       </div>
     </section>
   );
