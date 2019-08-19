@@ -1,13 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function TextInput(props) {
+function TextAreaInput(props) {
   return (
     <div className="field">
       <label className="label">{props.label}</label>
       <div className={"control" + (props.faIcon ? " has-icons-right" : "")}>
-        <input
-          className={"input" + (props.required ? " is-primary" : "")}
+        <textarea
+          className={"input textarea" + (props.required ? " is-primary" : "")}
           type={props.type}
           placeholder={props.required ? "* " + props.label : props.label}
           name={props.name}
@@ -23,4 +23,4 @@ function TextInput(props) {
   );
 }
 
-export default TextInput;
+export default TextAreaInput;
