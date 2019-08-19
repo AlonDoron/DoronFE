@@ -1,36 +1,29 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faUserAlt,
   faPhone,
   faEnvelope,
   faQuoteLeft
 } from "@fortawesome/free-solid-svg-icons";
 
-function LeadForm(props) {
+function ContactUsForm(props) {
   return (
-    <form>
+    <form onSubmit={props.onFormSubmit}>
       <div className="field">
-        <label className="label">שם פרטי</label>
-        <div className="control">
+        <label className="label">שם מלא</label>
+        <div className="control has-icons-right">
           <input
             className="input is-primary"
             type="text"
-            placeholder="* שם פרטי"
-            name="firstName"
+            placeholder="* שם מלא"
+            name="fullName"
             onChange={props.onInputChange}
+            required
           />
-        </div>
-      </div>
-      <div className="field">
-        <label className="label">שם משפחה</label>
-        <div className="control">
-          <input
-            className="input is-primary"
-            type="text"
-            placeholder="* שם משפחה"
-            name="lastName"
-            onChange={props.onInputChange}
-          />
+          <span className="icon is-right">
+            <FontAwesomeIcon icon={faUserAlt} />
+          </span>
         </div>
       </div>
       <div className="field">
@@ -42,8 +35,9 @@ function LeadForm(props) {
             placeholder="* מספר טלפון"
             name="phoneNumber"
             onChange={props.onInputChange}
+            required
           />
-          <span class="icon is-right">
+          <span className="icon is-right">
             <FontAwesomeIcon icon={faPhone} />
           </span>
         </div>
@@ -57,8 +51,9 @@ function LeadForm(props) {
             placeholder="* דואר אלקטרוני"
             name="mailAddress"
             onChange={props.onInputChange}
+            required
           />
-          <span class="icon is-right">
+          <span className="icon is-right">
             <FontAwesomeIcon icon={faEnvelope} />
           </span>
         </div>
@@ -73,20 +68,16 @@ function LeadForm(props) {
             name="otherDetails"
             onChange={props.onInputChange}
           />
-          <span class="icon is-right">
+          <span className="icon is-right">
             <FontAwesomeIcon icon={faQuoteLeft} />
           </span>
         </div>
       </div>
-      <div class="field is-grouped">
-        <div class="control">
-          <button class="button is-link is-right" onClick={props.onFormSubmit}>
-            שלח
-          </button>
-        </div>
+      <div class="control">
+        <input class="button is-link" type="submit" value="שלח" />
       </div>
     </form>
   );
 }
 
-export default LeadForm;
+export default ContactUsForm;
