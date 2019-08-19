@@ -1,5 +1,5 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FontAwesomeComponent from "./FontAwesomeComponent";
 
 function TextInput(props) {
   return (
@@ -13,11 +13,7 @@ function TextInput(props) {
           name={props.name}
           onChange={props.onInputChange}
         />
-        {props.faIcon && (
-          <span className="icon is-right">
-            <FontAwesomeIcon icon={props.faIcon} />
-          </span>
-        )}
+        {props.faIcon && <FontAwesomeComponent faIcon={props.faIcon} />}
       </div>
     </div>
   );
