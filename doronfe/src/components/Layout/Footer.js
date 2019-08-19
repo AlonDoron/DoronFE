@@ -1,5 +1,4 @@
 import React from "react";
-import "./Footer.css";
 import SnifComponent from "../SnifComponent";
 
 function Footer() {

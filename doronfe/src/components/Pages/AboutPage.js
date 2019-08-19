@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./AboutPage.css";
 import p2p from "../../assets/p2p.png";
 
 function AboutPage() {

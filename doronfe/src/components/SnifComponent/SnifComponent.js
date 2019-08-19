@@ -1,5 +1,5 @@
 import React from "react";
-import FontAwesomeComponent from "../common/FontAwesomeComponent";
+import { FontAwesomeComponent } from "../Common";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 function SnifComponent(props) {

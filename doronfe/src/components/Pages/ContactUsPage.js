@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ContactUsForm from "../ContactUsForm";
+import { ContactUsForm } from "../Forms";
 
 function ContactUsPage() {
   const [userDetails, setUserDetails] = useState({

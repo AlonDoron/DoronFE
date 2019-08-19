@@ -1,12 +1,9 @@
 import React from "react";
-import Header from "../Header";
-import Footer from "../Footer";
-import HomePage from "../HomePage";
-import AboutPage from "../AboutPage";
-import ContactUsPage from "../ContactUsPage";
-import NotFoundPage from "../NotFoundPage";
+import { Header, Footer } from "../Layout";
+import { routes } from "../../config/routes-config";
 import { Switch, Route } from "react-router-dom";
 import "bulma/css/bulma.css";
+import { NotFoundPage } from "../Pages";
 
 function App() {
   return (
@@ -15,9 +12,14 @@ function App() {
       <div className="content">
         <div className="center">
           <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/about" component={AboutPage} />
-            <Route path="/contactus" component={ContactUsPage} />
+            {routes.map((route, index) => (
+              <Route
+                key={index}
+                path={route.path}
+                component={route.component}
+                exact={route.exact}
+              />
+            ))}
             <Route component={NotFoundPage} />
           </Switch>
         </div>

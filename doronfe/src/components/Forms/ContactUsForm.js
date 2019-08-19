@@ -1,6 +1,5 @@
 import React from "react";
-import TextInput from "./common/TextInput";
-import TextAreaInput from "./common/TextAreaInput";
+import { TextInput, TextAreaInput } from "../Common";
 import {
   faUserAlt,
   faPhone,
