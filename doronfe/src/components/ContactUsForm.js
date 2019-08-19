@@ -73,8 +73,8 @@ function ContactUsForm(props) {
           </span>
         </div>
       </div>
-      <div class="control">
-        <input class="button is-link" type="submit" value="שלח" />
+      <div className="control">
+        <input className="button is-link" type="submit" value="שלח" />
       </div>
     </form>
   );

@@ -25,7 +25,7 @@ function Header() {
               className="headerLogo"
             />
           </NavLink>
-          <a
+          <div
             role="button"
             className="navbar-burger burger"
             aria-label="menu"
@@ -36,7 +36,7 @@ function Header() {
             <span aria-hidden="true" />
             <span aria-hidden="true" />
             <span aria-hidden="true" />
-          </a>
+          </div>
         </div>
         <div id="headerNavbarLinks" className={"navbar-menu " + burgerStyle}>
           <div className="navbar-end">
