@@ -1,5 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import TextInput from "./common/TextInput";
+import TextAreaInput from "./common/TextAreaInput";
 import {
   faUserAlt,
   faPhone,
@@ -10,69 +11,38 @@ import {
 function ContactUsForm(props) {
   return (
     <form onSubmit={props.onFormSubmit}>
-      <div className="field">
-        <label className="label">שם מלא</label>
-        <div className="control has-icons-right">
-          <input
-            className="input is-primary"
-            type="text"
-            placeholder="* שם מלא"
-            name="fullName"
-            onChange={props.onInputChange}
-            required
-          />
-          <span className="icon is-right">
-            <FontAwesomeIcon icon={faUserAlt} />
-          </span>
-        </div>
-      </div>
-      <div className="field">
-        <label className="label">מספר טלפון</label>
-        <div className="control has-icons-right">
-          <input
-            className="input is-primary"
-            type="number"
-            placeholder="* מספר טלפון"
-            name="phoneNumber"
-            onChange={props.onInputChange}
-            required
-          />
-          <span className="icon is-right">
-            <FontAwesomeIcon icon={faPhone} />
-          </span>
-        </div>
-      </div>
-      <div className="field">
-        <label className="label">דואר אלקטרוני</label>
-        <div className="control has-icons-right">
-          <input
-            className="input is-primary"
-            type="email"
-            placeholder="* דואר אלקטרוני"
-            name="mailAddress"
-            onChange={props.onInputChange}
-            required
-          />
-          <span className="icon is-right">
-            <FontAwesomeIcon icon={faEnvelope} />
-          </span>
-        </div>
-      </div>
-      <div className="field">
-        <label className="label">משהו נוסף?</label>
-        <div className="control has-icons-right">
-          <textarea
-            className="input textarea"
-            type="text"
-            placeholder="פרטים נוספים"
-            name="otherDetails"
-            onChange={props.onInputChange}
-          />
-          <span className="icon is-right">
-            <FontAwesomeIcon icon={faQuoteLeft} />
-          </span>
-        </div>
-      </div>
+      <TextInput
+        label="שם מלא"
+        type="text"
+        name="fullName"
+        onChange={props.onInputChange}
+        faIcon={faUserAlt}
+        required
+      />
+      <TextInput
+        label="מספר טלפון"
+        type="number"
+        name="phoneNumber"
+        onChange={props.onInputChange}
+        faIcon={faPhone}
+        required
+      />
+      <TextInput
+        label="דואר אלקטרוני"
+        type="email"
+        name="mailAddress"
+        onChange={props.onInputChange}
+        faIcon={faEnvelope}
+        required
+      />
+      <TextAreaInput
+        specialInput="textarea"
+        label="פרטי הפניה"
+        type="text"
+        name="otherDetails"
+        onChange={props.onInputChange}
+        faIcon={faQuoteLeft}
+      />
       <div className="control">
         <input className="button is-link" type="submit" value="שלח" />
       </div>
