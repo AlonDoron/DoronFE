@@ -12,6 +12,7 @@ function TextAreaInput(props) {
           placeholder={props.required ? "* " + props.label : props.label}
           name={props.name}
           onChange={props.onInputChange}
+          required={props.required}
         />
         {props.faIcon && (
           <span className="icon is-right">
