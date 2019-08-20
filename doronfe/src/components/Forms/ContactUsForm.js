@@ -1,7 +1,6 @@
 import React from "react";
 import { TextInput, TextAreaInput } from "../Common";
 import {
-  faUserAlt,
   faPhone,
   faEnvelope,
   faQuoteLeft
@@ -11,11 +10,17 @@ function ContactUsForm(props) {
   return (
     <form onSubmit={props.onFormSubmit}>
       <TextInput
-        label="שם מלא"
+        label="שם פרטי"
         type="text"
-        name="fullName"
+        name="firstName"
         onChange={props.onInputChange}
-        faIcon={faUserAlt}
+        required
+      />
+      <TextInput
+        label="שם משפחה"
+        type="text"
+        name="lastName"
+        onChange={props.onInputChange}
         required
       />
       <TextInput

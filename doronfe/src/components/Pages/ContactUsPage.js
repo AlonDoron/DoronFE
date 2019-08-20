@@ -3,7 +3,8 @@ import { ContactUsForm } from "../Forms";
 
 function ContactUsPage() {
   const [userDetails, setUserDetails] = useState({
-    fullName: "",
+    firstName: "",
+    lastName: "",
     phoneNumber: "",
     mailAddress: "",
     otherDetails: ""
