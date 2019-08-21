@@ -16,6 +16,7 @@ function ContactUsForm(props) {
         name="fullName"
         onChange={props.onInputChange}
         faIcon={faUserAlt}
+        error={props.errors.fullName}
         required
       />
       <TextInput
@@ -24,6 +25,7 @@ function ContactUsForm(props) {
         name="phoneNumber"
         onChange={props.onInputChange}
         faIcon={faPhone}
+        error={props.errors.phoneNumber}
         required
       />
       <TextInput
@@ -32,6 +34,7 @@ function ContactUsForm(props) {
         name="mailAddress"
         onChange={props.onInputChange}
         faIcon={faEnvelope}
+        error={props.errors.mailAddress}
         required
       />
       <TextAreaInput
@@ -41,6 +44,7 @@ function ContactUsForm(props) {
         name="requestSubject"
         onChange={props.onInputChange}
         faIcon={faQuoteLeft}
+        error={props.errors.requestSubject}
         required
       />
       <div className="control">

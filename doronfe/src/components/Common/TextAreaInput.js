@@ -1,25 +1,26 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FontAwesomeComponent from "./FontAwesomeComponent";
 
 function TextAreaInput(props) {
+  let wrapperClass = "textarea input";
+  if (props.error && props.error.length > 0) {
+    wrapperClass += " is-danger";
+  }
   return (
     <div className="field">
       <label className="label">{props.label}</label>
       <div className={"control" + (props.faIcon ? " has-icons-right" : "")}>
         <textarea
-          className={"input textarea" + (props.required ? " is-primary" : "")}
+          className={wrapperClass + (props.required ? " is-primary" : "")}
           type={props.type}
           placeholder={props.required ? "* " + props.label : props.label}
           name={props.name}
-          onChange={props.onInputChange}
+          onChange={props.onChange}
           required={props.required}
         />
-        {props.faIcon && (
-          <span className="icon is-right">
-            <FontAwesomeIcon icon={props.faIcon} />
-          </span>
-        )}
+        {props.faIcon && <FontAwesomeComponent faIcon={props.faIcon} />}
       </div>
+      {props.error && <p className="help is-danger">{props.error}</p>}
     </div>
   );
 }
