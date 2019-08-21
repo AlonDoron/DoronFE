@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { ContactUsForm } from "../Forms";
+import { toast } from "react-toastify";
+import { Redirect } from "react-router-dom";
 
 function ContactUsPage() {
   const [errors, setErrors] = useState({});
+  const [isRedirect, setIsRedirect] = useState(false);
   const [userDetails, setUserDetails] = useState({
     fullName: "",
     firstName: "",
@@ -51,7 +54,6 @@ function ContactUsPage() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    debugger;
     if (!formIsValid()) return;
     let [firstName, lastName] = getSplittedNames();
     setUserDetails({
@@ -59,6 +61,8 @@ function ContactUsPage() {
       firstName: firstName,
       lastName: lastName
     });
+    toast.success("פרטיך התקבלו בהצלחה, נחזור אליך בהקדם.");
+    setIsRedirect(true);
   }
 
   return (
@@ -76,6 +80,7 @@ function ContactUsPage() {
           onFormSubmit={handleFormSubmit}
         />
       </div>
+      {isRedirect && <Redirect to="/" />}
     </section>
   );
 }
