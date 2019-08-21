@@ -11,7 +11,7 @@ function TextInput(props) {
           type={props.type}
           placeholder={props.required ? "* " + props.label : props.label}
           name={props.name}
-          onChange={props.onInputChange}
+          onChange={props.onChange}
           required={props.required}
         />
         {props.faIcon && <FontAwesomeComponent faIcon={props.faIcon} />}

@@ -3,19 +3,38 @@ import { ContactUsForm } from "../Forms";
 
 function ContactUsPage() {
   const [userDetails, setUserDetails] = useState({
+    fullName: "",
     firstName: "",
     lastName: "",
     phoneNumber: "",
     mailAddress: "",
-    otherDetails: ""
+    requestSubject: ""
   });
 
   function handleInputChange({ target }) {
     setUserDetails({ ...userDetails, [target.name]: target.value });
   }
 
+  function getSplittedNames() {
+    let splittedFirstName = userDetails.fullName
+      .split(" ")
+      .slice(0, 1)
+      .join(" ");
+    let splittedLastName = userDetails.fullName
+      .split(" ")
+      .slice(1)
+      .join(" ");
+    return [splittedFirstName, splittedLastName];
+  }
+
   function handleFormSubmit(event) {
     event.preventDefault();
+    let [firstName, lastName] = getSplittedNames();
+    setUserDetails({
+      ...userDetails,
+      firstName: firstName,
+      lastName: lastName
+    });
   }
 
   return (
