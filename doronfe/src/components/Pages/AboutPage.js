@@ -1,6 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import p2p from "../../assets/p2p.png";
+import { RequestNewLeadButton } from "../Common";
 
 function AboutPage() {
   return (
@@ -20,13 +19,7 @@ function AboutPage() {
           ואדיב.
         </p>
         <h4>מקצוענות + שיטתיות = תמורה</h4>
-        <NavLink to="/leadform">
-          <img
-            className="p2pImage image is-three-quarters"
-            src={p2p}
-            alt="p2p"
-          />
-        </NavLink>
+        <RequestNewLeadButton />
       </div>
     </section>
   );
