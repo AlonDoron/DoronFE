@@ -1,5 +1,5 @@
 import React from "react";
-import SnifComponent from "../SnifComponent";
+import { SnifComponent } from "../Common";
 
 function Footer() {
   return (
