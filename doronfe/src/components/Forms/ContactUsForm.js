@@ -48,7 +48,7 @@ function ContactUsForm(props) {
         required
       />
       <div className="control">
-        <input className="button is-link" type="submit" value="שלח" />
+        <input className="button is-info" type="submit" value="שלח" />
       </div>
     </form>
   );

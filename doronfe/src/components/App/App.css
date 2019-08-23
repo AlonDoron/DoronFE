@@ -1,35 +1,5 @@
-.container {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-header,
-footer {
-  height: 100px;
-}
-
-.sidebar {
-  width: 100px;
-  padding: 10px;
-}
-
-.content,
-.center {
-  flex: 1;
-}
-
-.content {
-  display: flex;
-}
-
-.headerLogo {
-  max-width: 130px !important;
-  max-height: 600px !important;
-}
-
 .p2pImage {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    position: relative;
+    margin-top: 8%;
+    margin-right: 8%;
 }

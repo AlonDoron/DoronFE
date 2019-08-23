@@ -3,6 +3,8 @@ import { Header, Footer } from "../Layout";
 import { routes } from "../../config/routes-config";
 import { Switch, Route } from "react-router-dom";
 import "bulma/css/bulma.css";
+import "./App.sass";
+import "./App.css";
 import { NotFoundPage } from "../Pages";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
