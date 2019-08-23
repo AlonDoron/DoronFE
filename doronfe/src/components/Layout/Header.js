@@ -5,12 +5,11 @@ import { RequestNewLeadButton } from "../Common";
 
 function Header() {
   const [burgerStyle, setBurgerStyle] = useState("");
-  function handleClickOnBurger() {
-    if (burgerStyle === "") {
-      setBurgerStyle("is-active");
-    } else {
-      setBurgerStyle("");
-    }
+  function openBurgerMenu() {
+    setBurgerStyle("is-active");
+  }
+  function closeBurgerMenu() {
+    setBurgerStyle("");
   }
 
   const activeStyle = {
@@ -29,6 +28,7 @@ function Header() {
               width="130"
               height="65"
               className="headerLogo"
+              onClick={closeBurgerMenu}
             />
           </NavLink>
           <div
@@ -37,7 +37,7 @@ function Header() {
             aria-label="menu"
             aria-expanded="false"
             data-target="headerNavbarLinks"
-            onClick={handleClickOnBurger}
+            onClick={burgerStyle === "" ? openBurgerMenu : closeBurgerMenu}
           >
             <span aria-hidden="true" />
             <span aria-hidden="true" />
@@ -49,7 +49,7 @@ function Header() {
             <NavLink
               className="navbar-item"
               to="/"
-              onClick={handleClickOnBurger}
+              onClick={closeBurgerMenu}
               activeStyle={activeStyle}
               exact
             >
@@ -58,7 +58,7 @@ function Header() {
             <NavLink
               className="navbar-item"
               to="/about"
-              onClick={handleClickOnBurger}
+              onClick={closeBurgerMenu}
               activeStyle={activeStyle}
             >
               אודותינו
@@ -66,12 +66,12 @@ function Header() {
             <NavLink
               className="navbar-item"
               to="/contactus"
-              onClick={handleClickOnBurger}
+              onClick={closeBurgerMenu}
               activeStyle={activeStyle}
             >
               צור קשר
             </NavLink>
-            <RequestNewLeadButton onClick={handleClickOnBurger} />
+            <RequestNewLeadButton onClick={closeBurgerMenu} />
           </div>
         </div>
       </nav>
