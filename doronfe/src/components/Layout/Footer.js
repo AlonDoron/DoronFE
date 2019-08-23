@@ -12,22 +12,6 @@ function Footer() {
             phoneToCall="035052323"
             phoneToDisplay="03-505-2323"
           />
-
-          <SnifComponent
-            city="חיפה"
-            phoneToCall="048726166"
-            phoneToDisplay="04-872-6166"
-          />
-          <SnifComponent
-            city="נהריה"
-            phoneToCall="049825555"
-            phoneToDisplay="04-982-5555"
-          />
-          <SnifComponent
-            city="יקנעם"
-            phoneToCall="049894917"
-            phoneToDisplay="04-989-4917"
-          />
         </div>
       </div>
       <br />
