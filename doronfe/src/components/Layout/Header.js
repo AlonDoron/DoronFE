@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/doronLogo.png";
-import { RequestNewLeadButton } from "../Common";
+import { NewLeadButton } from "../Common";
 
 function Header() {
   const [burgerStyle, setBurgerStyle] = useState("");
@@ -69,7 +69,7 @@ function Header() {
             >
               צור קשר
             </NavLink>
-            <RequestNewLeadButton onClick={closeBurgerMenu} />
+            <NewLeadButton onClick={closeBurgerMenu} />
           </div>
         </div>
       </nav>

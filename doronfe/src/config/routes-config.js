@@ -2,6 +2,7 @@ import {
   HomePage,
   AboutPage,
   ContactUsPage,
+  LeadPage,
   NotFoundPage
 } from "../components/Pages";
 
@@ -18,6 +19,10 @@ export const routes = [
   {
     path: "/contactus",
     component: ContactUsPage
+  },
+  {
+    path: "/lead",
+    component: LeadPage
   },
   {
     path: "*",

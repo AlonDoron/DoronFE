@@ -2,9 +2,9 @@ import React from "react";
 import p2p from "../../assets/p2p.png";
 import { NavLink } from "react-router-dom";
 
-function RequestNewLeadButton(props) {
+function NewLeadButton(props) {
   return (
-    <NavLink to="/leadform">
+    <NavLink to="/lead">
       <img
         className="p2pImage image is-three-quarters"
         src={p2p}
@@ -15,4 +15,4 @@ function RequestNewLeadButton(props) {
   );
 }
 
-export default RequestNewLeadButton;
+export default NewLeadButton;
