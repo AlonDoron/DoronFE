@@ -13,6 +13,11 @@ function Header() {
     }
   }
 
+  const activeStyle = {
+    color: "#209cee",
+    backgroundColor: "#fafafa"
+  };
+
   return (
     <header>
       <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -45,6 +50,7 @@ function Header() {
               className="navbar-item"
               to="/"
               onClick={handleClickOnBurger}
+              activeStyle={activeStyle}
               exact
             >
               דף הבית
@@ -53,6 +59,7 @@ function Header() {
               className="navbar-item"
               to="/about"
               onClick={handleClickOnBurger}
+              activeStyle={activeStyle}
             >
               אודותינו
             </NavLink>
@@ -60,6 +67,7 @@ function Header() {
               className="navbar-item"
               to="/contactus"
               onClick={handleClickOnBurger}
+              activeStyle={activeStyle}
             >
               צור קשר
             </NavLink>
