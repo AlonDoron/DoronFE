@@ -25,8 +25,6 @@ function Header() {
             <img
               src={logo}
               alt="doronLogo"
-              width="130"
-              height="65"
               className="headerLogo"
               onClick={closeBurgerMenu}
             />
