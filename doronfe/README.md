@@ -13,5 +13,5 @@ The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
 ## This is the source code for the Doron Anak Habituach website.
-Built with ReactJS and Bulma (and in the future maybe Redux?)
+Built with ReactJS and Bulma (and in the future maybe Redux?)<br>
 The website was created with a mobile-first approach, with 100% responsibility.
