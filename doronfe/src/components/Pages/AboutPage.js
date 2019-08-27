@@ -1,5 +1,5 @@
 import React from "react";
-import { RequestNewLeadButton } from "../Common";
+import { NewLeadButton } from "../Common";
 
 function AboutPage() {
   return (
@@ -19,7 +19,7 @@ function AboutPage() {
           ואדיב.
         </p>
         <h4>מקצוענות + שיטתיות = תמורה</h4>
-        <RequestNewLeadButton />
+        <NewLeadButton />
       </div>
     </section>
   );
