@@ -22,10 +22,14 @@ function LeadPage() {
   // So we need to treat it properly.
   function handleMultiSelectChange(event) {
     if (event === null) return;
-    let updatedSelectedInsurances = [...event];
+    let selectedInsurances = [];
+    for (let index = 0; index < event.length; index++) {
+      let item = event[index];
+      selectedInsurances = selectedInsurances.concat(item.value);
+    }
     setUserDetails({
       ...userDetails,
-      selectedInsurances: updatedSelectedInsurances
+      selectedInsurances: selectedInsurances
     });
   }
 
@@ -63,8 +67,9 @@ function LeadPage() {
   function handleFormSubmit(event) {
     event.preventDefault();
     if (!formIsValid()) return;
+    console.log(userDetails);
     toast.success("פרטיך התקבלו בהצלחה, נחזור אליך בהקדם.");
-    setIsRedirect(true);
+    // setIsRedirect(true);
   }
 
   return (
