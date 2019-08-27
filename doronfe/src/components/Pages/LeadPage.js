@@ -67,9 +67,8 @@ function LeadPage() {
   function handleFormSubmit(event) {
     event.preventDefault();
     if (!formIsValid()) return;
-    console.log(userDetails);
     toast.success("פרטיך התקבלו בהצלחה, נחזור אליך בהקדם.");
-    // setIsRedirect(true);
+    setIsRedirect(true);
   }
 
   return (
