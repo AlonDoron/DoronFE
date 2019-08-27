@@ -11,37 +11,58 @@ function LeadPage() {
     lastName: "",
     phoneNumber: "",
     mailAddress: "",
-    insuranceType: ""
+    selectedInsurances: []
   });
 
   function handleInputChange({ target }) {
     setUserDetails({ ...userDetails, [target.name]: target.value });
   }
 
+  // Created this function because the React-Select package does deliver "normal" event object to handleChange
+  // So we need to treat it properly.
+  function handleMultiSelectChange(event) {
+    if (event === null) return;
+    let updatedSelectedInsurances = [...event];
+    setUserDetails({
+      ...userDetails,
+      selectedInsurances: updatedSelectedInsurances
+    });
+  }
+
   function formIsValid() {
     const _errors = {};
-    if (userDetails.fullName.length < 2) {
-      _errors.fullName = "שם זה קצר מידי.";
+
+    if (userDetails.firstName.length < 2) {
+      _errors.firstName = "שם זה קצר מידי.";
     }
+
+    if (userDetails.lastName.length < 2) {
+      _errors.lastName = "שם זה קצר מידי.";
+    }
+
     if (
       userDetails.phoneNumber.length < 9 ||
       userDetails.phoneNumber.length > 10
     ) {
       _errors.phoneNumber = "נא הזן מספר טלפון בין 9 ל-10 ספרות בלבד.";
     }
+
     if (userDetails.mailAddress.length < 9) {
-      _errors.mailAddress = "נא הזן מייל בעל יותר מ9 תווים.";
+      _errors.mailAddress = "מייל זה קצר מידי.";
     }
+
+    if (userDetails.selectedInsurances.length < 1) {
+      _errors.selectedInsurances = "נא הוסף לפחות סוג ביטוח אחד.";
+    }
+
     setErrors(_errors);
+
     return Object.keys(_errors).length === 0;
   }
 
   function handleFormSubmit(event) {
     event.preventDefault();
     if (!formIsValid()) return;
-    setUserDetails({
-      ...userDetails
-    });
     toast.success("פרטיך התקבלו בהצלחה, נחזור אליך בהקדם.");
     setIsRedirect(true);
   }
@@ -51,15 +72,15 @@ function LeadPage() {
       <div className="container">
         <h1 className="title">קבלת הצעת מחיר</h1>
         <p>הזינו את פרטיכם ונחזור אליכם בהקדם: </p>
-
         <LeadForm
           errors={errors}
           userDetails={userDetails}
           onInputChange={handleInputChange}
+          onMultiSelectChange={handleMultiSelectChange}
           onFormSubmit={handleFormSubmit}
         />
-        {isRedirect && <Redirect to="/" />}
       </div>
+      {isRedirect && <Redirect to="/" />}
     </section>
   );
 }
