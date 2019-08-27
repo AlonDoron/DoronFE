@@ -1,16 +1,15 @@
 import React from "react";
 import { FontAwesomeComponent } from "../Common";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 function SnifComponent(props) {
   return (
-    <address className="column is-full-mobile is-one-quarter-desktop">
-      <strong>{props.city}</strong>
-      <FontAwesomeComponent faIcon={faPhone} />
-      <a href={"tel:" + props.phoneToCall} className="phoneNumber">
-        <b>{props.phoneToDisplay}</b>
+    <h3 className="subtitle is-size-6 snifComponent">
+      {props.wayOfContact}:
+      <FontAwesomeComponent faIcon={props.icon} />
+      <a href={props.href} dir={props.dir}>
+        <b>{props.hrefText}</b>
       </a>
-    </address>
+    </h3>
   );
 }
 

@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import { ContactUsForm } from "../Forms";
 import { toast } from "react-toastify";
 import { Redirect } from "react-router-dom";
+import {
+  faEnvelope,
+  faPhone,
+  faMapMarkerAlt
+} from "@fortawesome/free-solid-svg-icons";
+import { SnifComponent } from "../Common";
 
 function ContactUsPage() {
   const [errors, setErrors] = useState({});
@@ -72,7 +78,28 @@ function ContactUsPage() {
         <h2 className="subtitle is-size-5">
           יש לכם שאלה? רוצים לקבל מידע נוסף?
         </h2>
-        <p>הזינו את פרטיכם ונחזור אליכם בהקדם: </p>
+        <b>צרו איתנו קשר באחת מהדרכים הבאות:</b>
+        <SnifComponent
+          wayOfContact="בטלפון"
+          href="tel: 035052323"
+          hrefText="03-505-2323"
+          icon={faPhone}
+        />
+        <SnifComponent
+          wayOfContact="במייל"
+          href="mailto: 303@5052323.co.il"
+          hrefText="303@5052323.co.il"
+          dir="ltr"
+          icon={faEnvelope}
+        />
+        <SnifComponent
+          wayOfContact="בסניפינו בכתובת"
+          href="https://goo.gl/maps/aNWecYx25BwNninQ6"
+          hrefText="סוקולוב 94, חולון"
+          icon={faMapMarkerAlt}
+        />
+        <b>או לחלופין, הזינו את פרטיכם ונחזור אליכם בהקדם: </b> <br />
+        <br />
         <ContactUsForm
           errors={errors}
           userDetails={userDetails}

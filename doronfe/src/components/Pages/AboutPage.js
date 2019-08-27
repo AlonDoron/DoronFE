@@ -6,7 +6,7 @@ function AboutPage() {
     <section className="section">
       <div className="container">
         <h1 className="title">אודותינו</h1>
-        <h2 className="subtitle">דורון ורוזן ענק הביטוח </h2>
+        <h2 className="subtitle">דורון ענק הביטוח </h2>
         <p>
           ענק הביטוח הוקמה בשנת 1970 כרשת כסוכנויות ביטוח הפעילות בביטוח חיים,
           אלמנטארי ובריאות. הרשת מייצגת את כל חברות הביטוח בישראל ובעזרת תוכנת
