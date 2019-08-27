@@ -11,7 +11,7 @@ function MultiSelectInput(props) {
           name={props.name}
           options={props.options}
           onChange={props.onChange}
-          placeholder={props.required ? "* " + props.label : props.label}
+          placeholder={props.required ? props.label + " (חובה)" : props.label}
           isMulti
         />
       </div>

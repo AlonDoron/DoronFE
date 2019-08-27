@@ -13,7 +13,7 @@ function TextAreaInput(props) {
         <textarea
           className={wrapperClass + (props.required ? " is-primary" : "")}
           type={props.type}
-          placeholder={props.required ? "* " + props.label : props.label}
+          placeholder={props.required ? props.label + " (חובה)" : props.label}
           name={props.name}
           onChange={props.onChange}
           required={props.required}
