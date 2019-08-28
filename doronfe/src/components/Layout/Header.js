@@ -101,7 +101,7 @@ function Header() {
             </NavLink>
             <NavLink
               className="navbar-item"
-              to="/"
+              to="/BituahEsek"
               onClick={closeBurgerMenu}
               activeStyle={activeStyle}
             >
