@@ -5,4 +5,5 @@ export { default as LeadPage } from "./LeadPage";
 export { default as BituahHovaPage } from "./BituachHovaPage";
 export { default as BituahZadGimelPage } from "./BituahZadGimelPage";
 export { default as BituahMakifPage } from "./BituahMakifPage";
+export { default as BituahDiraPage } from "./BituahDiraPage";
 export { default as NotFoundPage } from "./NotFoundPage";

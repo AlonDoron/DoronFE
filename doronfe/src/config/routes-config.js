@@ -6,7 +6,8 @@ import {
   NotFoundPage,
   BituahHovaPage,
   BituahZadGimelPage,
-  BituahMakifPage
+  BituahMakifPage,
+  BituahDiraPage
 } from "../components/Pages";
 
 export const routes = [
@@ -38,6 +39,10 @@ export const routes = [
   {
     path: "/bituahMakif",
     component: BituahMakifPage
+  },
+  {
+    path: "/bituahDira",
+    component: BituahDiraPage
   },
   {
     path: "*",

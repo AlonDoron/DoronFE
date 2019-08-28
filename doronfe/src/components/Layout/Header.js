@@ -93,7 +93,7 @@ function Header() {
             </div>
             <NavLink
               className="navbar-item"
-              to="/"
+              to="/bituahDira"
               onClick={closeBurgerMenu}
               activeStyle={activeStyle}
             >
