@@ -5,7 +5,8 @@ import {
   LeadPage,
   NotFoundPage,
   BituahHovaPage,
-  BituahZadGimelPage
+  BituahZadGimelPage,
+  BituahMakifPage
 } from "../components/Pages";
 
 export const routes = [
@@ -33,6 +34,10 @@ export const routes = [
   {
     path: "/bituahZadGimel",
     component: BituahZadGimelPage
+  },
+  {
+    path: "/bituahMakif",
+    component: BituahMakifPage
   },
   {
     path: "*",

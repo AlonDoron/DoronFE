@@ -82,7 +82,7 @@ function Header() {
                   ביטוח חובה
                 </NavLink>
                 <NavLink
-                  to="/"
+                  to="/bituahMakif"
                   className="navbar-item"
                   onClick={closeBurgerMenu}
                   activeStyle={activeStyle}
