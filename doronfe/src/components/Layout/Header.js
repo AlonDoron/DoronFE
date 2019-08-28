@@ -63,16 +63,7 @@ function Header() {
             </NavLink>
             <div className="navbar-item has-dropdown is-hoverable">
               <div className="navbar-link">ביטוח רכב</div>
-
               <div className="navbar-dropdown" dir="rtl">
-                <NavLink
-                  to="/bituahZadGimel"
-                  className="navbar-item"
-                  onClick={closeBurgerMenu}
-                  activeStyle={activeStyle}
-                >
-                  ביטוח צד ג'
-                </NavLink>
                 <NavLink
                   to="/bituahHova"
                   className="navbar-item"
@@ -88,6 +79,14 @@ function Header() {
                   activeStyle={activeStyle}
                 >
                   ביטוח מקיף
+                </NavLink>
+                <NavLink
+                  to="/bituahZadGimel"
+                  className="navbar-item"
+                  onClick={closeBurgerMenu}
+                  activeStyle={activeStyle}
+                >
+                  ביטוח צד ג'
                 </NavLink>
               </div>
             </div>
