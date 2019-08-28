@@ -66,7 +66,7 @@ function Header() {
 
               <div className="navbar-dropdown" dir="rtl">
                 <NavLink
-                  to="/"
+                  to="/bituahZadGimel"
                   className="navbar-item"
                   onClick={closeBurgerMenu}
                   activeStyle={activeStyle}
