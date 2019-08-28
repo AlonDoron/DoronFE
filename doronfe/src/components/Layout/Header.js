@@ -74,7 +74,7 @@ function Header() {
                   ביטוח צד ג'
                 </NavLink>
                 <NavLink
-                  to="/"
+                  to="/bituahHova"
                   className="navbar-item"
                   onClick={closeBurgerMenu}
                   activeStyle={activeStyle}

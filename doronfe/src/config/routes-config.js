@@ -3,7 +3,8 @@ import {
   AboutPage,
   ContactUsPage,
   LeadPage,
-  NotFoundPage
+  NotFoundPage,
+  BituahHovaPage
 } from "../components/Pages";
 
 export const routes = [
@@ -23,6 +24,10 @@ export const routes = [
   {
     path: "/lead",
     component: LeadPage
+  },
+  {
+    path: "/bituahHova",
+    component: BituahHovaPage
   },
   {
     path: "*",
