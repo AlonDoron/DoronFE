@@ -61,6 +61,59 @@ function Header() {
             >
               אודותינו
             </NavLink>
+            <div className="navbar-item has-dropdown is-hoverable">
+              <div className="navbar-link">ביטוח רכב</div>
+              <div className="navbar-dropdown" dir="rtl">
+                <NavLink
+                  to="/bituahHova"
+                  className="navbar-item"
+                  onClick={closeBurgerMenu}
+                  activeStyle={activeStyle}
+                >
+                  ביטוח חובה
+                </NavLink>
+                <NavLink
+                  to="/bituahMakif"
+                  className="navbar-item"
+                  onClick={closeBurgerMenu}
+                  activeStyle={activeStyle}
+                >
+                  ביטוח מקיף
+                </NavLink>
+                <NavLink
+                  to="/bituahZadGimel"
+                  className="navbar-item"
+                  onClick={closeBurgerMenu}
+                  activeStyle={activeStyle}
+                >
+                  ביטוח צד ג'
+                </NavLink>
+              </div>
+            </div>
+            <NavLink
+              className="navbar-item"
+              to="/bituahDira"
+              onClick={closeBurgerMenu}
+              activeStyle={activeStyle}
+            >
+              ביטוח דירה
+            </NavLink>
+            <NavLink
+              className="navbar-item"
+              to="/BituahEsek"
+              onClick={closeBurgerMenu}
+              activeStyle={activeStyle}
+            >
+              ביטוח עסק
+            </NavLink>
+            <NavLink
+              className="navbar-item"
+              to="/bituahNesiot"
+              onClick={closeBurgerMenu}
+              activeStyle={activeStyle}
+            >
+              ביטוח נסיעות
+            </NavLink>
             <NavLink
               className="navbar-item"
               to="/contactus"

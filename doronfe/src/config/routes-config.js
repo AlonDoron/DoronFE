@@ -3,7 +3,13 @@ import {
   AboutPage,
   ContactUsPage,
   LeadPage,
-  NotFoundPage
+  NotFoundPage,
+  BituahHovaPage,
+  BituahZadGimelPage,
+  BituahMakifPage,
+  BituahDiraPage,
+  BituahEsekPage,
+  BituahNesiotPage
 } from "../components/Pages";
 
 export const routes = [
@@ -23,6 +29,30 @@ export const routes = [
   {
     path: "/lead",
     component: LeadPage
+  },
+  {
+    path: "/bituahHova",
+    component: BituahHovaPage
+  },
+  {
+    path: "/bituahZadGimel",
+    component: BituahZadGimelPage
+  },
+  {
+    path: "/bituahMakif",
+    component: BituahMakifPage
+  },
+  {
+    path: "/bituahDira",
+    component: BituahDiraPage
+  },
+  {
+    path: "/bituahEsek",
+    component: BituahEsekPage
+  },
+  {
+    path: "/bituahNesiot",
+    component: BituahNesiotPage
   },
   {
     path: "*",
