@@ -7,4 +7,5 @@ export { default as BituahZadGimelPage } from "./BituahZadGimelPage";
 export { default as BituahMakifPage } from "./BituahMakifPage";
 export { default as BituahDiraPage } from "./BituahDiraPage";
 export { default as BituahEsekPage } from "./BituahEsekPage";
+export { default as BituahNesiotPage } from "./BituahNesiotPage";
 export { default as NotFoundPage } from "./NotFoundPage";

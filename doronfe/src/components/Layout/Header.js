@@ -109,7 +109,7 @@ function Header() {
             </NavLink>
             <NavLink
               className="navbar-item"
-              to="/"
+              to="/bituahNesiot"
               onClick={closeBurgerMenu}
               activeStyle={activeStyle}
             >
