@@ -1,5 +1,5 @@
 import React from "react";
-import p2p from "../../assets/p2p.png";
+import p2p from "../../assets/images/p2p.png";
 import { NavLink } from "react-router-dom";
 
 function NewLeadButton(props) {
