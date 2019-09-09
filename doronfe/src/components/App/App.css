@@ -48,3 +48,13 @@
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+@media screen and (min-width: 1024px) and (max-width:1399px) {
+
+    .navbar,
+    .navbar-menu.is-active,
+    .navbar-start,
+    .navbar-end {
+        display: block;
+    }
+}
