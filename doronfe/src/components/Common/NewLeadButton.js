@@ -6,7 +6,7 @@ function NewLeadButton(props) {
   return (
     <NavLink to="/lead">
       <img
-        className="p2pImage image is-three-quarters"
+        className="borderBlink p2pImage"
         src={p2p}
         alt="p2p"
         onClick={props.onClick}
