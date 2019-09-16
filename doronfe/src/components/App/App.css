@@ -5,6 +5,25 @@
     margin-top: 8%;
 }
 
+@keyframes borderBlink {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: rgb(42, 165, 246)
+    }
+}
+
+.borderBlink {
+    border: 3px solid rgb(42, 165, 246);
+    border-radius: 12px;
+    -webkit-animation: borderBlink 1s infinite;
+    animation: borderBlink 1s infinite;
+}
+
 .headerLogo {
     width: 170px;
     height: 85px;
@@ -12,4 +31,30 @@
 
 .snifComponent {
     padding-left: 15px;
+}
+
+.card {
+    transform: scale3d(1, 1, 1);
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: scale3d(1.05, 1.05, 1);
+    border: 1px solid rgb(42, 165, 246);
+    transition: 0.5s;
+}
+
+.navbar-item {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 1024px) and (max-width:1399px) {
+
+    .navbar,
+    .navbar-menu.is-active,
+    .navbar-start,
+    .navbar-end {
+        display: block;
+    }
 }
