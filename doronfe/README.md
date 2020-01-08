@@ -5,7 +5,7 @@ The website was created with a mobile-first approach, with 100% responsiveness f
 
 Live site here: [5052323.co.il](http://5052323.co.il)
 
-Proudly developed by [Alon Doron](www.linkedin.com/in/alon-doron).
+Proudly developed by [Alon Doron](https://www.linkedin.com/in/alon-doron).
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
