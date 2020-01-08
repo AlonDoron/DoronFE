@@ -5,7 +5,6 @@ import { Switch, Route } from "react-router-dom";
 import "bulma/css/bulma.css";
 import "./App.sass";
 import "./App.css";
-import { NotFoundPage } from "../Pages";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -25,7 +24,6 @@ function App() {
                 exact={route.exact}
               />
             ))}
-            <Route component={NotFoundPage} />
           </Switch>
         </div>
       </div>
