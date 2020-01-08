@@ -7,7 +7,11 @@ function HomePage() {
       <section className="section">
         <div className="container">
           <h1 className="title">דורון ענק הביטוח</h1>
-          <BituahGridCards />
+          <h3>חברת סוכנות הביטוח הזולה בישראל, כבר למעלה מ20 שנה.</h3>
+          <div>
+            <h4>הביטוחים שלנו: </h4>
+            <BituahGridCards />
+          </div>
         </div>
       </section>
     </div>
