@@ -9,4 +9,7 @@ export { default as BituahDiraPage } from "./BituahDiraPage";
 export { default as BituahEsekPage } from "./BituahEsekPage";
 export { default as BituahNesiotPage } from "./BituahNesiotPage";
 export { default as BituahGridCards } from "./BituahGridCards";
+export { default as PensionPage } from "./PensionPage";
+export { default as HealthPage } from "./HealthPage";
+export { default as BituahMashkanta } from "./BituahMashkanta";
 export { default as NotFoundPage } from "./NotFoundPage";
