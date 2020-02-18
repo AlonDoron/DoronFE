@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ContactUsForm } from "../Forms";
 import { toast } from "react-toastify";
 import { Redirect } from "react-router-dom";
+import { backendHandler } from "../../api/services/backendHandler";
 import {
   faEnvelope,
   faPhone,
@@ -67,8 +68,18 @@ function ContactUsPage() {
       firstName: firstName,
       lastName: lastName
     });
-    toast.success("פרטיך התקבלו בהצלחה, נחזור אליך בהקדם.");
-    setIsRedirect(true);
+
+    backendHandler
+      .post({ ...userDetails }, "contactus")
+      .then(() => {
+        toast.success("פרטיך התקבלו בהצלחה, נחזור אליך בהקדם.");
+        setIsRedirect(true);
+      })
+      .catch(error => {
+        toast.error(
+          "נראה שקיבלנו שגיאה. פרטיך לא נקלטו. אנא נסה שנית מאוחר יותר."
+        );
+      });
   }
 
   return (
