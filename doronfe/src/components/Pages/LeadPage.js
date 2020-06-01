@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { LeadForm } from "../Forms";
 import { Redirect } from "react-router-dom";
 import { toast } from "react-toastify";
+import { backendHandler } from "../../api/services/backendHandler";
 
 function LeadPage() {
   const [errors, setErrors] = useState({});
@@ -67,8 +68,17 @@ function LeadPage() {
   function handleFormSubmit(event) {
     event.preventDefault();
     if (!formIsValid()) return;
-    toast.success("פרטיך התקבלו בהצלחה, נחזור אליך בהקדם.");
-    setIsRedirect(true);
+    backendHandler
+      .post({ ...userDetails }, "lead")
+      .then(() => {
+        toast.success("פרטיך התקבלו בהצלחה, נחזור אליך בהקדם.");
+        setIsRedirect(true);
+      })
+      .catch(error => {
+        toast.error(
+          "נראה שקיבלנו שגיאה. פרטיך לא נקלטו. אנא נסה שנית מאוחר יותר."
+        );
+      });
   }
 
   return (
