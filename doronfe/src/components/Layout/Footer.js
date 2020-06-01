@@ -2,7 +2,7 @@ import React from "react";
 import {
   faEnvelope,
   faPhone,
-  faMapMarkerAlt
+  faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { SnifComponent } from "../Common";
@@ -34,6 +34,15 @@ function Footer() {
           />
         </div>
       </div>
+      <br />
+      <p>
+        עקב הימצאותינו בבניין בן 50 שנה, אין נגישות לנכים לבית העסק, ולכן לקוח
+        נכה המעוניין להגיע, יש להתקשר ונבוא לטפל בו.
+      </p>
+      <p>
+        בית העסק אינו נגיש לנכים. אם נכה מעוניין להגיע למשרדינו, נא להגיע לכניסה
+        לבניין ואנחנו נרד אליו לכל דבר ועניין, בתיאום מראש.
+      </p>
       <br />
       <p>&copy; כל הזכויות שמורות לדורון ענק הביטוח.</p>
     </footer>
