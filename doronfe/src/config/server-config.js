@@ -1,4 +1,4 @@
-export const SERVER_URL = "http://localhost:3000/api";
+export const SERVER_URL = "http://localhost:3001";
 export const HEADERS = {
-  "Content-Type": "application/json"
+  "Content-Type": "application/json",
 };
