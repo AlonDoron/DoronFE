@@ -2,7 +2,6 @@
     position: relative;
     width: 300px;
     height: 50px;
-    margin-top: 8%;
 }
 
 @keyframes borderBlink {
@@ -49,6 +48,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.navbar .navbar-newLead {
+    margin-top: 2%;
+}
+
 @media screen and (min-width: 1024px) and (max-width:1399px) {
 
     .navbar,
@@ -56,5 +59,9 @@
     .navbar-start,
     .navbar-end {
         display: block;
+    }
+
+    .navbar .navbar-newLead {
+        padding-top: 0%;
     }
 }

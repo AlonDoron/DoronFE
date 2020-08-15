@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <div className="container">
-      <ToastContainer autoClose={3000} hideProgressBar rtl />
+      <ToastContainer autoClose={6000} hideProgressBar rtl />
       <Header />
       <div className="content">
         <div className="center">

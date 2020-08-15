@@ -14,7 +14,7 @@ function Header() {
 
   const activeStyle = {
     color: "#209cee",
-    backgroundColor: "#fafafa"
+    backgroundColor: "#fafafa",
   };
 
   return (
@@ -122,7 +122,9 @@ function Header() {
             >
               צור קשר
             </NavLink>
-            <NewLeadButton onClick={closeBurgerMenu} />
+            <div className="navbar-newLead">
+              <NewLeadButton onClick={closeBurgerMenu} />
+            </div>
           </div>
         </div>
       </nav>
