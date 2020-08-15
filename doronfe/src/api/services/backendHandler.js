@@ -6,9 +6,6 @@ export const backendHandler = {
 };
 
 function post(contactDetails, route) {
-  console.log(`URL: ${SERVER_URL}/${route}`);
-  console.log(JSON.stringify({ ...contactDetails }));
-
   return axios
     .post(`${SERVER_URL}/${route}`, JSON.stringify({ ...contactDetails }), {
       headers: HEADERS,
